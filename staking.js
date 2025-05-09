@@ -1717,7 +1717,7 @@ function showTxNotification(txHash, message = "Transaction successful!") {
   const shortHash = `${txHash.slice(0, 6)}...${txHash.slice(-6)}`;
 
   toast.innerText = `Pending...\nHash: ${shortHash}`;
-  toast.onclick = () => window.open(`https://sei.blockscout.com/${txHash}`, '_blank');
+  toast.onclick = () => window.open(`https://sei.blockscout.com/tx/${txHash}`, '_blank');
   container.appendChild(toast);
 
   setTimeout(() => {
