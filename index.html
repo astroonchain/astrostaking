@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staking AO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" sizes="3002x300" href="astrologo.jpg">
+</head>
+<body>
+  <div class="container">
+
+    <a href=""><h1> <a style="color: white;">AO</a> <a style="color: rgba(206, 21, 21, 0.562);">STAKING</a></h1></a>
+
+    <!-- Wallet Connection -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <button id="connectWallet" onclick="connectWallet()">Connect Wallet</button>
+      <p id="connectMessage" class="connect-message">Please connect your crypto wallet to see your staked AO</p>
+
+      <button id="disconnectWallet" onclick="disconnectWallet()" style="display: none;">Disconnect</button>
+    </div>
+
+    <div id="stakingSection" style="display: none;">
+      <div id="stakingForm">
+        <a style="color: rgb(168, 180, 180);text-align: right;" id="walletAddress"><em>Wallet Not Connected</em></a>
+        <p><strong>Available to Stake:</strong> <span id="Balance">0</span></p>
+        <p><strong>My Staked AO:</strong> <span id="totalStaked">0</span></p>
+
+        <input type="number" id="amountInput" placeholder="Enter amount to stake" min="0" step="any" />
+
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; justify-content: center;">
+            <button onclick="stakeOrApprove()">Stake</button>
+            <button onclick="unstake()">Unstake</button>
+            <button onclick="stakeAllTokens()">Stake All</button>
+            <button onclick="unstakeAllTokens()">Unstake All</button>
+          </div>          
+
+        <div style="margin-top: 20px;">
+          <p><strong>Reward:</strong> <span id="pendingReward">0</span></p>
+          <button onclick="claimReward()">Claim Reward</button>
+        </div>
+      </div>
+
+      <br>
+
+      <div style="background-color: rgba(206, 21, 21, 0.562); border-radius: 4px; border: outset rgb(240, 240, 240) 3px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+      <p>Total AO in Smart Contract: <span id="totalAOInChain">0</span></p>
+    </div>
+
+    </div>
+    
+    <br>
+
+    <ul>
+        <h4>Community</h4>
+        <li><a href="https://t.me/astroonchain" target="_blank">
+          Telegram
+        </a></li>
+        <li><a href="https://x.com/astro_onchain" target="_blank">
+          Twitter
+        </a></li>
+        <li><a href="https://github.com/astroonchain/astro_on_seinetwork/blob/main/whitepapper.md" target="_blank">
+            Whitepapper
+          </a></li>
+      </ul>
+
+      <button onclick="addToken()">Add AO Token</button>
+
+  </div>
+  
+  <div id="tx-toast-container"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
+  <script src="staking.js"></script>
+</body>
+</html>

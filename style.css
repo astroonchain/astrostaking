@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Black background */
+  color: #f0f0f0; /* Light text for contrast */
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 150px;
+  margin-top: 20px;
+}
+
+/* PS2-Style Button with dark blue border */
+button {
+  background-color: #1c1c1c;
+  color: white;
+  border: 2px solid #001d4a; /* Dark blue border */
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #002b6b;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 109, 255, 0.5);
+}
+
+button:active {
+  background-color: #000e2b;
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #555;
+  color: #999;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+em {
+  color: #ff4c4c;
+}
+
+#stakingSection {
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#stakingForm {
+  text-align: center;
+}
+
+#amountInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #333;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#tx-toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-image {
+    margin-bottom: 20px;
+  }
+}
+
+.connect-message {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.connect-message.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+}
